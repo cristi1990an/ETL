@@ -1,0 +1,18 @@
+// Hint files help the Visual Studio IDE interpret Visual C++ identifiers
+// such as names of functions and macros.
+// For more information see https://go.microsoft.com/fwlink/?linkid=865984
+#define NOEXCEPT_CPY_CTOR noexcept(nothrow_copy_constructible_pair)
+#define CPY_CTOR_REQ requires(copy_constructible_pair)
+#define EXPLICIT_CPY_CTOR explicit(explicit_copy_constructible_pair)
+#define EXPLICIT_DEFAULT_CTOR explicit(explicitly_default_constructible_pair)
+#define DEFAULT_CTOR_REQ requires(default_constructible_pair)
+#define NOEXCEPT_DEFAULT_CTOR noexcept(nothrow_default_constructible_pair)
+#define EXPLICIT_CTOR_FROM(U1, U2) explicit(explicitly_constructible_pair_from<U1, U2>)
+#define CTOR_REQ_FROM(U1, U2) requires(constructible_pair_from<U1, U2>)
+#define NOEXCEPT_CTOR_FROM(U1, U2) noexcept(nothrow_constructible_pair_from<U1, U2>)
+#define NOEXCEPT_SWAP noexcept(nothrow_swappable_pair)
+#define SWAP_REQ requires(swappable_pair)
+#define NOEXCEPT_CONST_SWAP noexcept(nothrow_swappable_const_pair)
+#define CONST_SWAP_REQ requires(swappable_const_pair)
+#define EXPLICIT_MOVE_CTOR
+#define NOEXCEPT_MOVE_CTOR
